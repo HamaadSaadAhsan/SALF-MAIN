@@ -7,18 +7,18 @@ import StKittsLogo from "../../assets/Antigua-Barbuda 4.png";
 import StLucia from "../../assets/Antigua-Barbuda 5.png";
 import TurkeyLogo from "../../assets/Antigua-Barbuda 6.png";
 
-function TopTierCitizenship() {
+function TopTierCitizenship({ title, subtitle, classNames }) {
     return (
-        <div className="d-flex bg-black pt-5">
+        <div className={classNames}>
             <div className="container mt-10">
                 <div className="row flex-wrap">
                     <div className="col-lg-2">
                         <div className="d-flex flex-column">
                             <h1 className="fw-bold fs-3 text-white">
-                                Our Top-Tier Citizenship Programs
+                                {title}
                             </h1>
                             <p className="fw-medium text-primary">
-                                Citizenship by Investment Programs
+                                {subtitle}
                             </p>
                         </div>
                     </div>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import ContactHeader from "@/Components/ContactHeader.jsx";
 import Navbar from "@/Components/Navbar.jsx";
 import Hero from "@/Components/Hero.jsx";
@@ -9,26 +9,33 @@ import CeoMessage from "@/Components/CeoMessage.jsx";
 import WhatOutClientSay from "@/Components/WhatOutClientSay.jsx";
 import Testimonials from "@/Components/Testimonials.jsx";
 import AwardsAppreciation from "@/Components/AwardsAppreciation.jsx";
-import TopTierCitizenship from '@/Components/TopTierCitizenship';
+import TopTierCitizenship from "@/Components/TopTierCitizenship.jsx";
+import TopTierResidence from "@/Components/TopTierResidence.jsx";
+import ContactUsConsultationForm from "@/Components/ContactUsConsultationForm";
+import Layout from "@/Layouts/Layout";
 const Home = () => {
     return (
-        <>
-            <div className="container-fluid bg-dark px-4 py-3 bg-black m-0">
-                <ContactHeader
-                    className="d-flex gap-3 justify-content-end text-decoration-none align-items-center"
-                    phoneNumber="+92 301 84 88 944" />
-            </div>
-            <Navbar/>
-            <Hero className="mb-20"/>
+        <Layout>
+            <Hero className="mb-20" />
             <InfoServicesSection />
             <WhyChooseSaadAhsan />
-            <TopTierCitizenship/>
+            <TopTierCitizenship
+                title={"Our Top-Tier Citizenship Programs"}
+                subtitle={"Citizenship by Investment Programs"}
+                classNames={"d-flex bg-black pt-5"}
+            />
+            <TopTierResidence
+                title="Our Top-Tier Residency Programs"
+                subtitle={"Residency by Investment Programs"}
+                classNames={"d-flex bg-white pt-5"}
+            />
+            <ContactUsConsultationForm />
             <LatestNewsAndBlogs />
             <CeoMessage />
             <WhatOutClientSay />
             <Testimonials className="shadow shadow-lg" />
             <AwardsAppreciation />
-        </>
+        </Layout>
     );
 };
 

@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\CitizenshipController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\StKittsAndNevisController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -13,6 +15,9 @@ Route::get('/', function () {
         'phpVersion' => PHP_VERSION,
     ]);
 });
+
+Route::get('st-kitts-nevis', [StKittsAndNevisController::class, 'index']);
+Route::get('citizenship-by-investment', [CitizenshipController::class, 'index']);
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
